@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/gradient_menu.xml" value="0.13425925925925927" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/gradient_menu_berlatih.xml" value="0.17407407407407408" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/gradient_menu_translasi.xml" value="0.17407407407407408" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/home_gradient_maths.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/ic_effort.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/ic_home.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/ic_user.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/navigation_foreground.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/progress_drawable.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/refer_earn_button.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/side_nav_bar.xml" value="0.1388888888888889" />
+        <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/layout/activity_main.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
