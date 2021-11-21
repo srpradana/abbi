@@ -1,14 +1,13 @@
 package com.informatika.abbi.belajar
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.informatika.abbi.data.BelajarData
 import com.informatika.abbi.databinding.ItemGridListBinding
 
-class BelajarBisindoAdapter(private val listData: ArrayList<BelajarData>): RecyclerView.Adapter<BelajarBisindoAdapter.BelajarBisindoViewHolder>() {
+class BelajarAdapter(private val listData: ArrayList<BelajarData>): RecyclerView.Adapter<BelajarAdapter.BelajarBisindoViewHolder>() {
 
     inner class BelajarBisindoViewHolder(val binding: ItemGridListBinding): RecyclerView.ViewHolder(binding.root) {
 

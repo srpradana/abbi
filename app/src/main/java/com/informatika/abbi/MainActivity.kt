@@ -15,9 +15,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.cvBelajar.setOnClickListener{
-            val intent = Intent(this@MainActivity, BelajarActivity::class.java)
-            startActivity(intent)
+        val fragmentManager = supportFragmentManager
+        val menuFragment = MenuFragment()
+        val tagFragment = fragmentManager.findFragmentByTag(MenuFragment::class.java.simpleName)
+
+        if(tagFragment == MenuFragment()){
+            fragmentManager.beginTransaction()
+                .add(R.id.fragment_container, menuFragment, MenuFragment::class.java.simpleName)
+                .commit()
         }
     }
 }
