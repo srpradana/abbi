@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.informatika.abbi.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_belajarMenuFragment"
+            app:destination="@id/belajarMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/belajarMenuFragment"
+        android:name="com.informatika.abbi.BelajarMenuFragment"
+        android:label="fragment_belajar_menu"
+        tools:layout="@layout/fragment_belajar_menu" />
+</navigation>

@@ -11,7 +11,7 @@ import com.informatika.abbi.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var binding: FragmentMenuBinding
+    private var binding: FragmentMenuBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,27 +19,32 @@ class MenuFragment : Fragment(), View.OnClickListener {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentMenuBinding.inflate(inflater, container, false)
-        return binding.root
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.cvBelajar.setOnClickListener(this)
+        binding?.cvBelajar?.setOnClickListener(this)
 
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.cv_belajar -> {
-                val fragmentManager = parentFragmentManager
+                val fragmentManager = activity?.supportFragmentManager
                 val belajarMenuFragment = BelajarMenuFragment()
 
-                fragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container,belajarMenuFragment, BelajarMenuFragment::class.java.simpleName)
-                    .addToBackStack(null)
-                    .commit()
+                fragmentManager?.beginTransaction()
+                    ?.replace(R.id.fragment_container,belajarMenuFragment, BelajarMenuFragment::class.java.simpleName)
+                    ?.addToBackStack(null)
+                    ?.commit()
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }

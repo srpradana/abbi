@@ -2,7 +2,10 @@ package com.informatika.abbi.belajar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.informatika.abbi.data.BelajarData
 import com.informatika.abbi.data.BelajarAsetData
 import com.informatika.abbi.databinding.ActivityBelajarBinding
@@ -10,7 +13,8 @@ import com.informatika.abbi.databinding.ActivityBelajarBinding
 class BelajarActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBelajarBinding
-    private lateinit var adapter: BelajarAdapter
+    private lateinit var gridAdapter: BelajarGridAdapter
+    private lateinit var fullAdapter: BelajarFullAdapter
 
     private var list : ArrayList<BelajarData> = arrayListOf()
 
@@ -26,19 +30,51 @@ class BelajarActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         when(intent.getStringExtra(KEY_CODE)){
-            BISINDO_CODE -> list.addAll(BelajarAsetData.listDataBisindo)
-            SIBI_CODE -> list.addAll(BelajarAsetData.listDataSibi)
+            BISINDO_CODE -> {
+                title = "BISINDO"
+                list.addAll(BelajarAsetData.listDataBisindo)
+            }
+            SIBI_CODE -> {
+                title = "SIBI"
+                list.addAll(BelajarAsetData.listDataSibi)
+            }
         }
 
-        setUpRecyclerView()
+        setUpGridRecyclerView()
+        binding.swMode.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked){
+                binding.rvBelajar.visibility = View.GONE
+                binding.vpFullView.visibility = View.VISIBLE
+                prepareViewPager()
+            }else{
+                binding.vpFullView.visibility = View.GONE
+                binding.rvBelajar.visibility = View.VISIBLE
+                setUpGridRecyclerView()
+            }
+        }
     }
 
-    private fun setUpRecyclerView() {
+    private fun setUpFullRecyclerView(){
+        with(binding){
+            rvBelajar.setHasFixedSize(true)
+            rvBelajar.layoutManager = LinearLayoutManager(this@BelajarActivity, RecyclerView.HORIZONTAL, false)
+            fullAdapter = BelajarFullAdapter(list)
+            rvBelajar.adapter = fullAdapter
+        }
+    }
+
+    private fun prepareViewPager(){
+        binding.vpFullView.adapter = BelajarFullAdapter(list)
+
+    }
+
+    private fun setUpGridRecyclerView() {
         with(binding){
             rvBelajar.setHasFixedSize(true)
             rvBelajar.layoutManager = GridLayoutManager(this@BelajarActivity, 3)
-            adapter = BelajarAdapter(list)
-            rvBelajar.adapter = adapter
+            gridAdapter = BelajarGridAdapter(list)
+            rvBelajar.adapter = gridAdapter
         }
     }
+
 }

@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.informatika.abbi.data.BelajarData
 import com.informatika.abbi.databinding.ItemGridListBinding
 
-class BelajarAdapter(private val listData: ArrayList<BelajarData>): RecyclerView.Adapter<BelajarAdapter.BelajarBisindoViewHolder>() {
+class BelajarGridAdapter(private val listData: ArrayList<BelajarData>): RecyclerView.Adapter<BelajarGridAdapter.BelajarBisindoViewHolder>() {
 
     inner class BelajarBisindoViewHolder(val binding: ItemGridListBinding): RecyclerView.ViewHolder(binding.root) {
 
@@ -19,10 +19,10 @@ class BelajarAdapter(private val listData: ArrayList<BelajarData>): RecyclerView
     }
 
     override fun onBindViewHolder(holder: BelajarBisindoViewHolder, position: Int) {
-        val bisindo = listData[position]
+        val dataBahasa = listData[position]
 
         Glide.with(holder.itemView.context)
-            .load(bisindo.images)
+            .load(dataBahasa.images)
             .into(holder.binding.imgItem)
     }
 

@@ -10,15 +10,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/gradient_menu"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/menu_image"/>
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/home_ic_maths"/>
+            android:text="AYO BELAJAR BAHASA ISYARAT"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
@@ -26,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -38,7 +49,7 @@
                     android:layout_height="match_parent"
                     tools:layout="@layout/fragment_menu"/>
 
-            </LinearLayout>
+            </FrameLayout>
 
         </androidx.core.widget.NestedScrollView>
 
