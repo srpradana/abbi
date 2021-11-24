@@ -1,5 +1,6 @@
 package com.informatika.abbi
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -26,6 +27,7 @@ class MenuFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.cvBelajar?.setOnClickListener(this)
+        binding?.cvTranslasi?.setOnClickListener(this)
 
     }
 
@@ -39,6 +41,10 @@ class MenuFragment : Fragment(), View.OnClickListener {
                     ?.replace(R.id.fragment_container,belajarMenuFragment, BelajarMenuFragment::class.java.simpleName)
                     ?.addToBackStack(null)
                     ?.commit()
+            }
+            R.id.cv_translasi ->{
+                val intent = Intent(activity, Translate::class.java)
+                startActivity(intent)
             }
         }
     }

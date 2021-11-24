@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Andro Project/ABBI/app/src/main/res/layout/activity_belajar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Andro Project/ABBI/app/src/main/res/layout/activity_main.xml" value="0.15729166666666666" />
+        <entry key="..\:/Andro Project/ABBI/app/src/main/res/layout/fragment_belajar_menu.xml" value="0.15729166666666666" />
+        <entry key="..\:/Andro Project/ABBI/app/src/main/res/layout/fragment_menu.xml" value="0.15729166666666666" />
+        <entry key="..\:/Andro Project/ABBI/app/src/main/res/layout/item_grid_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Andro Project/ABBI/app/src/main/res/layout/mlpredict.xml" value="0.15729166666666666" />
         <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/gradient_bisindo.xml" value="0.13703703703703704" />
         <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/gradient_menu.xml" value="0.13425925925925927" />
         <entry key="..\:/Kuliah/Semester 7/Pemrogramman Mobile/Project ABBI/app/src/main/res/drawable/gradient_menu_berlatih.xml" value="0.17407407407407408" />

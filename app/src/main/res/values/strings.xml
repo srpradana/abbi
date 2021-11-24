@@ -4,4 +4,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ayo_belajar_bahasa_isyarat">AYO BELAJAR BAHASA ISYARAT</string>
     <string name="mode_layar_penuh">Mode Layar Penuh</string>
+
+    <!-- Buat ML -->
+    <string name="str_button_add">Add</string>
+    <string name="str_button_clear">Clear</string>
+    <string name="str_button_back">Back</string>
+    <string name="txtvw_word"> </string>
 </resources>
