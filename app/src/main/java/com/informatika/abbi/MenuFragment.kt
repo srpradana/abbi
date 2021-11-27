@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.informatika.abbi.belajar.BelajarActivity
+import com.informatika.abbi.berlatih.BerlatihActivity
+import com.informatika.abbi.data.BerlatihData
 import com.informatika.abbi.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment(), View.OnClickListener {
@@ -27,6 +29,7 @@ class MenuFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.cvBelajar?.setOnClickListener(this)
+        binding?.cvBerlatih?.setOnClickListener(this)
         binding?.cvTranslasi?.setOnClickListener(this)
 
     }
@@ -41,6 +44,10 @@ class MenuFragment : Fragment(), View.OnClickListener {
                     ?.replace(R.id.fragment_container,belajarMenuFragment, BelajarMenuFragment::class.java.simpleName)
                     ?.addToBackStack(null)
                     ?.commit()
+            }
+            R.id.cv_berlatih -> {
+                val intent = Intent(activity, BerlatihActivity::class.java)
+                startActivity(intent)
             }
             R.id.cv_translasi ->{
                 val intent = Intent(activity, Translate::class.java)

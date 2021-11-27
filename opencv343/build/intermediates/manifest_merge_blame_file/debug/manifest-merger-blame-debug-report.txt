@@ -5,13 +5,13 @@
 5    android:versionName="3.4.3" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
-8-->D:\Andro Project\ABBI\opencv343\java\AndroidManifest.xml
-9        android:targetSdkVersion="28" />
-9-->D:\Andro Project\ABBI\opencv343\java\AndroidManifest.xml
+8        android:minSdkVersion="21"
+8-->D:\Kuliah\Semester 7\Pemrogramman Mobile\Project ABBI\opencv343\java\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\Kuliah\Semester 7\Pemrogramman Mobile\Project ABBI\opencv343\java\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->D:\Andro Project\ABBI\opencv343\java\AndroidManifest.xml:7:5-65
-11-->D:\Andro Project\ABBI\opencv343\java\AndroidManifest.xml:7:22-62
+11-->D:\Kuliah\Semester 7\Pemrogramman Mobile\Project ABBI\opencv343\java\AndroidManifest.xml:7:5-65
+11-->D:\Kuliah\Semester 7\Pemrogramman Mobile\Project ABBI\opencv343\java\AndroidManifest.xml:7:22-62
 12
 13</manifest>

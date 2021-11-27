@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.informatika.abbi">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABBIApplication.NoActionBar">
         <activity
-            android:name=".belajar.DetailActivity"
+            android:name=".berlatih.BerlatihActivity"
             android:exported="false" />
         <activity
             android:name=".splash.SplashScreenActivity"
@@ -25,15 +27,15 @@
         </activity>
         <activity
             android:name=".belajar.BelajarActivity"
-            android:theme="@style/Theme.ABBIApplication"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.ABBIApplication" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".Translate"
-            android:screenOrientation="landscape"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
