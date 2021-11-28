@@ -1,13 +1,11 @@
 package com.informatika.abbi.belajar
 
 import android.annotation.SuppressLint
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.informatika.abbi.R
 import com.informatika.abbi.data.BelajarData
 import com.informatika.abbi.data.BelajarAsetData
 import com.informatika.abbi.databinding.ActivityBelajarBinding
@@ -17,7 +15,6 @@ class BelajarActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBelajarBinding
     private lateinit var gridAdapter: BelajarGridAdapter
-    private lateinit var fullAdapter: BelajarFullAdapter
     private var stateSwitch: Boolean = false
 
     private var list : ArrayList<BelajarData> = arrayListOf()
@@ -28,10 +25,15 @@ class BelajarActivity : AppCompatActivity() {
         const val KEY_CODE = "key_code"
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBelajarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        binding.swMode.text = "Mode Layar Penuh"
 
         when(intent.getStringExtra(KEY_CODE)){
             BISINDO_CODE -> {
@@ -45,6 +47,7 @@ class BelajarActivity : AppCompatActivity() {
         }
 
         showPreference()
+        firstLayoutRecyclerView(stateSwitch)
 
         binding.swMode.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked){
@@ -68,15 +71,6 @@ class BelajarActivity : AppCompatActivity() {
         binding.swMode.isChecked = stateSwitch
     }
 
-    private fun setUpFullRecyclerView(){
-        with(binding){
-            rvBelajar.setHasFixedSize(true)
-            rvBelajar.layoutManager = LinearLayoutManager(this@BelajarActivity, RecyclerView.HORIZONTAL, false)
-            fullAdapter = BelajarFullAdapter(list)
-            rvBelajar.adapter = fullAdapter
-        }
-    }
-
     private fun prepareViewPager(){
         binding.vpFullView.adapter = BelajarFullAdapter(list)
 
@@ -84,11 +78,27 @@ class BelajarActivity : AppCompatActivity() {
 
     private fun setUpGridRecyclerView() {
         with(binding){
-            rvBelajar.setHasFixedSize(true)
             rvBelajar.layoutManager = GridLayoutManager(this@BelajarActivity, 3)
             gridAdapter = BelajarGridAdapter(list)
             rvBelajar.adapter = gridAdapter
         }
+    }
+
+    private fun firstLayoutRecyclerView(checked: Boolean){
+        if(checked){
+            binding.rvBelajar.visibility = View.GONE
+            binding.vpFullView.visibility = View.VISIBLE
+            prepareViewPager()
+        }else{
+            binding.vpFullView.visibility = View.GONE
+            binding.rvBelajar.visibility = View.VISIBLE
+            setUpGridRecyclerView()
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }

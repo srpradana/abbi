@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/frame_menu">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,10 +15,10 @@
             android:id="@+id/cv_belajar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_22sdp"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             app:cardCornerRadius="15dp"
@@ -37,22 +38,22 @@
                     android:paddingEnd="20dp"
                     android:paddingBottom="8dp"
                     android:textStyle="bold"
-                    android:textSize="26sp"
+                    android:textSize="@dimen/_18ssp"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:text="Belajar"/>
+                    android:text="@string/title_menu1"/>
 
                 <TextView
                     android:id="@+id/tv_desc_belajar"
-                    android:layout_width="250dp"
+                    android:layout_width="@dimen/_180sdp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:paddingBottom="20dp"
-                    android:textSize="14sp"
-                    android:text="Mengenal Bahasa Isyarat Melalui Flashcard"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/desc_menu1"
                     app:layout_constraintTop_toBottomOf="@id/tv_title_belajar"
                     app:layout_constraintStart_toStartOf="parent"/>
 
@@ -76,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/_8sdp"
             app:cardCornerRadius="15dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,22 +94,22 @@
                     android:paddingEnd="20dp"
                     android:paddingBottom="8dp"
                     android:textStyle="bold"
-                    android:textSize="26sp"
+                    android:textSize="@dimen/_18ssp"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:text="Berlatih"/>
+                    android:text="@string/title_menu2"/>
 
                 <TextView
                     android:id="@+id/tv_desc_berlatih"
-                    android:layout_width="250dp"
+                    android:layout_width="@dimen/_180sdp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:paddingStart="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingEnd="20dp"
-                    android:textSize="14sp"
-                    android:text="Berlatih Dengan Menebak Huruf dan Gambar"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/desc_menu2"
                     app:layout_constraintTop_toBottomOf="@id/tv_title_berlatih"
                     app:layout_constraintStart_toStartOf="parent"/>
 
@@ -132,7 +133,7 @@
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:id="@+id/cv_translasi"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/_10sdp"
             app:cardCornerRadius="15dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -149,34 +150,34 @@
                     android:paddingEnd="20dp"
                     android:paddingBottom="8dp"
                     android:textStyle="bold"
-                    android:textSize="26sp"
+                    android:textSize="@dimen/_18ssp"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:text="Translasi"/>
+                    android:text="@string/title_menu3"/>
 
                 <TextView
                     android:id="@+id/tv_desc_translasi"
-                    android:layout_width="250dp"
+                    android:layout_width="@dimen/_180sdp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:paddingStart="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingEnd="20dp"
-                    android:textSize="14sp"
-                    android:text="Translasi Gambar Bahasa Isyarat"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/desc_menu3"
                     app:layout_constraintTop_toBottomOf="@id/tv_title_translasi"
                     app:layout_constraintStart_toStartOf="parent"/>
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_height="@dimen/_50sdp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tv_desc_translasi"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginEnd="16dp"
-                    android:src="@drawable/home_ic_chemistry"/>
+                    android:src="@drawable/image_terjemah"/>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg_dark_blue">#0d4353</color>
     <color name="bg_grey">#fafafa</color>
+    <color name="colorGreen">#4BB543</color>
+    <color name="orange">#ff5722</color>
+    <color name="disabled_grey">#EBEBE4</color>
+
+    //red
+    <color name="colorRed1">#d50000</color>
+    <color name="colorRed2">#b71c1c</color>
 
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>

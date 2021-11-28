@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.informatika.abbi.belajar.BelajarActivity
 import com.informatika.abbi.berlatih.BerlatihActivity
 import com.informatika.abbi.data.BerlatihData
@@ -37,13 +38,7 @@ class MenuFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.cv_belajar -> {
-                val fragmentManager = activity?.supportFragmentManager
-                val belajarMenuFragment = BelajarMenuFragment()
-
-                fragmentManager?.beginTransaction()
-                    ?.replace(R.id.fragment_container,belajarMenuFragment, BelajarMenuFragment::class.java.simpleName)
-                    ?.addToBackStack(null)
-                    ?.commit()
+                Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_belajarMenuFragment)
             }
             R.id.cv_berlatih -> {
                 val intent = Intent(activity, BerlatihActivity::class.java)

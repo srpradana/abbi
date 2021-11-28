@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".berlatih.BerlatihActivity">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:drawableStart="@drawable/icon_wrong_answer"
+        android:background="@drawable/bg_nice_red"
+        android:drawablePadding="@dimen/_5sdp"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/white"
+        android:text="@string/close"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/img_question"
         android:layout_width="@dimen/_175sdp"
@@ -25,7 +41,7 @@
         android:layout_marginEnd="@dimen/_30sdp"
         android:gravity="center_horizontal"
         android:visibility="invisible"
-        android:text="Huruf apa yang ditampilkan pada gambar di atas?"
+        android:text="@string/huruf_apa_yang_ditampilkan_pada_gambar_di_atas"
         android:textSize="@dimen/_14ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -38,7 +54,9 @@
         android:layout_height="@dimen/_40sdp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="96dp"
+        android:textStyle="bold"
         android:backgroundTint="@color/teal_200"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_question"
         tools:text="A" />
@@ -49,6 +67,8 @@
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="36dp"
+        android:visibility="invisible"
+        android:textStyle="bold"
         android:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_question"
@@ -59,6 +79,8 @@
         android:layout_width="@dimen/_115sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginStart="36dp"
+        android:visibility="invisible"
+        android:textStyle="bold"
         android:layout_marginTop="192dp"
         android:backgroundTint="@color/teal_200"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,20 +93,26 @@
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="192dp"
         android:layout_marginEnd="36dp"
+        android:visibility="invisible"
+        android:textStyle="bold"
         android:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_question"
         tools:text="D" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_next"
-        android:layout_width="@dimen/_130sdp"
+        android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="36dp"
+        android:background="@drawable/bg_nice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Next"
+        android:text="@string/next"
+        android:enabled="false"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/btn_answerD" />
 
     <ProgressBar

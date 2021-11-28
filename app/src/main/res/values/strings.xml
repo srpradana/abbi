@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ABBI Application</string>
+    <string name="app_name">ABBI</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ayo_belajar_bahasa_isyarat">AYO BELAJAR BAHASA ISYARAT</string>
@@ -10,4 +10,16 @@
     <string name="str_button_clear">Clear</string>
     <string name="str_button_back">Back</string>
     <string name="txtvw_word"> </string>
+    <string name="huruf_apa_yang_ditampilkan_pada_gambar_di_atas">Huruf apa yang ditampilkan pada gambar di atas?</string>
+    <string name="next">Selanjutnya</string>
+    <string name="close">Keluar</string>
+    <string name="title_menu3">Terjemah</string>
+    <string name="title_menu2">Berlatih</string>
+    <string name="title_menu1">Belajar</string>
+    <string name="desc_menu1">Mengenal Bahasa Isyarat Melalui Flashcard</string>
+    <string name="desc_menu2">Berlatih Dengan Menebak Huruf dan Gambar</string>
+    <string name="desc_menu3">Terjemah Gambar Bahasa Isyarat</string>
+    <string name="title_belajar1">BISINDO</string>
+    <string name="title_belajar2">SIBI</string>
+    <string name="title">AYO BELAJAR BAHASA ISYARAT</string>
 </resources>
